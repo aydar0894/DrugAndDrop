@@ -1,0 +1,9 @@
+c:\users\asus\documents\visual studio 2015\Projects\BookingAdminPanel\BookingAdminPanel\bin\Debug\BookingAdminPanel.exe.config
+c:\users\asus\documents\visual studio 2015\Projects\BookingAdminPanel\BookingAdminPanel\bin\Debug\BookingAdminPanel.exe
+c:\users\asus\documents\visual studio 2015\Projects\BookingAdminPanel\BookingAdminPanel\bin\Debug\BookingAdminPanel.pdb
+c:\users\asus\documents\visual studio 2015\Projects\BookingAdminPanel\BookingAdminPanel\obj\Debug\BookingAdminPanel.csprojResolveAssemblyReference.cache
+c:\users\asus\documents\visual studio 2015\Projects\BookingAdminPanel\BookingAdminPanel\obj\Debug\BookingAdminPanel.Form1.resources
+c:\users\asus\documents\visual studio 2015\Projects\BookingAdminPanel\BookingAdminPanel\obj\Debug\BookingAdminPanel.Properties.Resources.resources
+c:\users\asus\documents\visual studio 2015\Projects\BookingAdminPanel\BookingAdminPanel\obj\Debug\BookingAdminPanel.csproj.GenerateResource.Cache
+c:\users\asus\documents\visual studio 2015\Projects\BookingAdminPanel\BookingAdminPanel\obj\Debug\BookingAdminPanel.exe
+c:\users\asus\documents\visual studio 2015\Projects\BookingAdminPanel\BookingAdminPanel\obj\Debug\BookingAdminPanel.pdb
