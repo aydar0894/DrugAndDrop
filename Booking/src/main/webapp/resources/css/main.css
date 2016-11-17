@@ -1,0 +1,25 @@
+.myContent {
+    margin-top: 60px;
+}
+
+body {
+    background: url(/resources/images/bg.jpg) no-repeat center center fixed;
+    background-size: 100% 100%;
+}
+
+header {
+    background-color: #1b6d85;
+    color: white;
+    height: 50px;
+    width: 100%;
+    padding-top: 15px;
+    top: 0;
+}
+
+header a {
+    color: white;
+}
+
+header .userside {
+    text-align: right;
+}
