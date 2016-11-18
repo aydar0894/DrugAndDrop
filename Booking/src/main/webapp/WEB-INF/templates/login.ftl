@@ -9,13 +9,14 @@
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
-            <input type="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
+            <input type="password" type="password" class="form-control" id="exampleInputPassword1"
+                   placeholder="Password"
                    name="pass">
         </div>
         <#if error??>
             <p>Incorrect login or password!</p>
         </#if>
-        <md-button type="submit" class="md-raised md-primary">Submit</md-button>
+        <md-button type="submit" class="md-raised md-primary">Log in</md-button>
     </form>
 
 
@@ -24,4 +25,4 @@
 
 </script>
 </#macro>
-<@main title="Логин" customStyles=["resources/css/myStyles.css"]/>
+<@main title="Login" customStyles=["resources/css/myStyles.css"]/>

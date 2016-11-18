@@ -32,14 +32,8 @@ public class ServiceAspect {
         Method method = clazz.getMethod(joinPoint.getSignature().getName());
         RetryIfException retryIfException = method.getAnnotation(RetryIfException.class);
         int count = retryIfException.value();
-        System.out.println("OK BOSS "+count);
-        while (--count>0){
-            try {
-                return joinPoint.proceed();
-            } catch (Throwable throwable) {
-                System.out.println("Ошибка, еще "+(count)+" попыток");
-            }
-        }
+        System.out.println("OK BOSS " + count);
+
         return joinPoint.proceed();
     }
 

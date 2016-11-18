@@ -6,11 +6,21 @@
 </@security.authorize>
 
 <header>
-    <div class="col-lg-3 col-lg-offset-9 userside">
-    <#if username??>
-        <p>${username}  <a href="/logout">Sign out</a></p>
-    <#else>
-        <p><a href="/login">Sign in</a> <a href="/registration">Sign up</a></p>
-    </#if>
+<#if username??>
+    <div class="col-lg-8 col-lg-offset-1">
+        <#if role == "ROLE_ADMIN">
+            <a class="admin-link" href="/admin/">ADMIN PANEL</a>
+        </#if>
     </div>
+
+<div class="col-lg-2 userside">
+
+    <p>${username}  <a href="/logout">Sign out</a></p>
+<#else>
+    <div class="col-lg-3 col-lg-offset-9 userside">
+
+    <p><a href="/login">Sign in</a> <a href="/registration">Sign up</a></p>
+</div>
+
+</#if>
 </header>

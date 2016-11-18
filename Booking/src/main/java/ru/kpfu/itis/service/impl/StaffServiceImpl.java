@@ -6,6 +6,10 @@ import ru.kpfu.itis.form.StaffForm;
 import ru.kpfu.itis.repository.StaffRepository;
 import ru.kpfu.itis.service.StaffService;
 
+import java.sql.Date;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 /**
  * Created by Ilgiz on 17.11.2016.
  */
@@ -16,8 +20,12 @@ public class StaffServiceImpl implements StaffService {
 
     @Override
     public boolean addStaff(StaffForm form) {
-        if (form != null)
+        if (form != null){
+            if (form.getDateOfBirth() == null){
+                form.setDateOfBirth(Date.valueOf(LocalDate.parse("20.03.1996")));
+            }
             return staffRepository.save(form);
+        }
         return false;
     }
 }

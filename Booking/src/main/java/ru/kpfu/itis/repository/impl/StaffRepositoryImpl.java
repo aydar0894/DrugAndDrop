@@ -24,7 +24,6 @@ public class StaffRepositoryImpl implements StaffRepository {
     public List<Staff> findAll() {
         Query query = em.createNativeQuery("SELECT * from Staff;", Staff.class);
         return query.getResultList();
-
     }
 
     @Override

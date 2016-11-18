@@ -10,11 +10,11 @@
 <div id="js-hotels" class="col-lg-6 col-lg-offset-3">
 
 </div>
-<div id="js-tweets" class="col-lg-6 col-lg-offset-3">
+<div id="js-tweets" class="col-lg-6 col-lg-offset-3 login">
 
 </div>
 
 
 </#macro>
 
-<@main title="Main" customScripts=["resources/js/tweet.js"]/>
+<@main title="Main" customScripts=["resources/js/tweet.js"] customStyles=["resources/css/myStyle.css"]/>

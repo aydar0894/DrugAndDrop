@@ -4,7 +4,6 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Past;
 import java.util.Date;
 
 /**
@@ -21,14 +20,12 @@ public class StaffForm {
     @Digits(integer = 8, fraction = 2, message = "only numbers with 2 digits after point!!")
     private int salary;
 
-    @NotNull(message = "Please write birthday!")
-    @Past
     private Date dateOfBirth;
 
     @NotNull(message = "Please write position!")
     private Long position;
 
-    @Digits(integer = 8, fraction = 2, message = "only numbers with 2 digits after point!!")
+    @Digits(integer = 11, fraction = 0)
     private int phone;
 
     public Long gethId() {

@@ -11,7 +11,7 @@
         <security:intercept-url pattern="/login" access="isAnonymous()"/>
         <security:intercept-url pattern="/registration" access="isAnonymous()"/>
         <security:intercept-url pattern="/resources/**" access="permitAll()"/>
-        <security:intercept-url pattern="/" access="hasRole('ROLE_USER')"/>
+        <security:intercept-url pattern="/" access="isAuthenticated()"/>
         <security:intercept-url pattern="/booking/booking/**" access="hasRole('ROLE_USER')"/>
         <security:form-login
                 login-page="/login"

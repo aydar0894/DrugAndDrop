@@ -2,7 +2,7 @@
  * Created by Ilgiz on 17.11.2016.
  */
 $(document).ready(function () {
-    showRents();
+    showStaffs();
 
     $("#rents-btn").on("click", function () {
         showRents();
@@ -13,9 +13,27 @@ $(document).ready(function () {
     });
 
     $("#staff-btn").on("click", function () {
-        showRents();
+        showStaffs();
     });
 });
+
+function addStaff() {
+    // $input = $("#js-tweet-text");
+    // var text = $input.val();
+    // if (text.length == 0) {
+    //     return;
+    // }
+    // $.ajax({
+    //     url: "/tweets/add",
+    //     type: "POST",
+    //     data: {
+    //         text: text
+    //     },
+    //     success: function () {
+    //         showStaffs();
+    //     }
+    // })
+}
 
 
 function showRents() {
@@ -42,10 +60,10 @@ function showHotels() {
     })
 }
 
-function showHotels() {
+function showStaffs() {
 
     $.ajax({
-        url: "/admin/getAllHotels",
+        url: "/admin/getAllStaffs",
         type: "GET",
         dataType: "html",
         success: function (data) {
