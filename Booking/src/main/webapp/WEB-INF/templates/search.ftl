@@ -1,7 +1,14 @@
 <#assign sf=JspTaglibs["http://www.springframework.org/tags/form"]>
 <#include "main-template.ftl"/>
 <#macro m_body>
-
+    <#if RequestParameters.sucss??>
+        <div id="success-alert" class="alert alert-success col-md-4 col-md-offset-4" role="alert">Book is done!</div>
+    <script>
+        $("#success-alert").fadeTo(2000, 500).slideUp(500, function(){
+            $("#success-alert").slideUp(500);
+        });
+    </script>
+    </#if>
 <div class="col-md-4 col-md-offset-4">
 
     <div ng-app="BookingApp2" ng-cloak>

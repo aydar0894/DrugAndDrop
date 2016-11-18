@@ -11,6 +11,7 @@
         <security:intercept-url pattern="/login" access="isAnonymous()"/>
         <security:intercept-url pattern="/registration" access="isAnonymous()"/>
         <security:intercept-url pattern="/resources/**" access="permitAll()"/>
+        <security:intercept-url pattern="/recources/**" access="permitAll()"/>
         <security:intercept-url pattern="/" access="isAuthenticated()"/>
         <security:intercept-url pattern="/booking/booking/**" access="hasRole('ROLE_USER')"/>
         <security:form-login
@@ -20,7 +21,7 @@
                 username-parameter="username"
                 default-target-url="/booking/"
                 authentication-failure-url="/login?error=true"/>
-        <security:logout logout-url="/logout" logout-success-url="/"/>
+        <security:logout logout-url="/logout" logout-success-url="/booking/"/>
     </security:http>
 
     <security:authentication-manager>

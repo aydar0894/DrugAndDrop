@@ -6,7 +6,7 @@ import ru.kpfu.itis.form.UserRegistrationForm;
 @Service
 public interface UserService {
 
-    void saveNewUser(UserRegistrationForm form);
+    boolean saveNewUser(UserRegistrationForm form);
 
     void securedMethod();
 

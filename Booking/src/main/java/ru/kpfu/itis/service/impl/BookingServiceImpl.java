@@ -16,7 +16,7 @@ public class BookingServiceImpl implements BookingService {
     BookingRepository bookingRepository;
 
     @Override
-    public void save(Booking booking) {
-        bookingRepository.save(booking);
+    public boolean save(Booking booking, String username) {
+        return bookingRepository.save(booking, username);
     }
 }

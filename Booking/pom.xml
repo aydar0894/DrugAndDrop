@@ -13,19 +13,12 @@
         <hibernate.version>4.3.0.Final</hibernate.version>
         <project.encoding>UTF-8</project.encoding>
         <javax.servlet.version>3.0.1</javax.servlet.version>
-        <sql_path>/src/main/resources/Microsoft JDBC Driver 6.0 for SQL Server/sqljdbc_6.0/rus/sqljdbc42.jar</sql_path>
+        <sql_path>/src/main/resources/Microsoft JDBC Driver 6.0 for SQL Server/sqljdbc_6.0/sqljdbc4-4.0.2206.100.jar</sql_path>
 
     </properties>
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-server -->
-        <dependency>
-            <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-server</artifactId>
-            <version>9.4.0.M1</version>
-            <scope>provided</scope>
-        </dependency>
-
 
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -92,7 +85,7 @@
         <dependency>
             <groupId>com.mchange</groupId>
             <artifactId>c3p0</artifactId>
-            <version>0.9.2.1</version>
+            <version>0.9.5.2</version>
         </dependency>
 
         <dependency>

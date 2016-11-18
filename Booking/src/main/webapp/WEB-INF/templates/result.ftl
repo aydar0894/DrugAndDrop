@@ -12,4 +12,4 @@
 
 </script>
 </#macro>
-<@main title="Serach Result"/>
+<@main title="Serach Result" customStyles=["/resources/css/result.css"]/>

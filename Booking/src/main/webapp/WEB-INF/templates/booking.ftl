@@ -1,12 +1,20 @@
 <#assign sf=JspTaglibs["http://www.springframework.org/tags/form"]>
 <#include "main-template.ftl"/>
 <#macro m_body>
-<div class="col-md-4 col-md-offset-4">
+<div class="book">
+
+<div class="col-md-8 col-md-offset-2 ">
 
     <div ng-app="BookingApp1" ng-cloak>
 
         <md-content layout-padding>
             <label class="md-headline">Hotel name: ${hotelNumber.hotel.name}</label>
+            <md-card-title-media>
+                <md-card>
+                    <img src="/resources/images/${hotelNumber.hotel.pictUrl}" class="md-card-image"
+                         alt="image caption">
+                </md-card>
+            </md-card-title-media>
             <label class="md-subhead">Hotel discription:
                 <p>Location: ${hotelNumber.hotel.hotelLocation} </p>
                 <p>room №: ${hotelNumber.number} </p>
@@ -67,10 +75,13 @@
         var myDatePicker = angular.element($element[0].querySelector('#birthDay'));
         var myDatePickerInputContainer = angular.element(myDatePicker[0].children[1]);
         var myDatePickerInput = angular.element(myDatePickerInputContainer[0].children[0]);
-        myDatePickerInput.attr("name", "birthDay");
+        myDatePickerInput.attr("name", "burthDay");
     });
     ;
 
     </script>
+    </div>
+</div>
+
 </#macro>
-<@main title="Booking"/>
+<@main title="Booking" customStyles=["/resources/css/booking.css"]/>

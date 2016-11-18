@@ -20,7 +20,7 @@ public class HotelRepositoryImpl implements HotelRepository {
 
     @Override
     public List<Hotel> findAll() {
-        Query query = em.createNativeQuery("SELECT * from Hotels;", Hotel.class);
+        Query query = em.createNativeQuery("SELECT TOP 100 * from Hotels;", Hotel.class);
         return query.getResultList();
     }
 }

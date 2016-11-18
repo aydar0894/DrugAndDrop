@@ -2,6 +2,7 @@ package ru.kpfu.itis.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -12,6 +13,7 @@ import ru.kpfu.itis.form.SearchForm;
 import ru.kpfu.itis.model.Booking;
 import ru.kpfu.itis.model.HotelNumber;
 import ru.kpfu.itis.model.Search;
+import ru.kpfu.itis.model.User;
 import ru.kpfu.itis.service.BookingService;
 import ru.kpfu.itis.service.HotelNumberService;
 import ru.kpfu.itis.service.SearchService;
@@ -53,6 +55,7 @@ public class BookingController {
     @RequestMapping(value = "/result", method = RequestMethod.GET)
     public String getRegistrationPage(Model model, @ModelAttribute Search search) {
         List<HotelNumber> hotelNumbers;
+
         if (search == null)
             hotelNumbers = new ArrayList();
         else
@@ -120,8 +123,8 @@ public class BookingController {
             model.addAttribute("hotelNumber", number);
             return "/booking/" + numberId;
         }
-
-        bookingService.save(booking);
-        return "redirect:/?sucss=\"true\"";
+        String username =  ((User)(SecurityContextHolder.getContext().getAuthentication().getPrincipal())).getUsername();
+        bookingService.save(booking, username);
+        return "redirect:/booking/?sucss=\"true\"";
     }
 }

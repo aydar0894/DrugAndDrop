@@ -38,11 +38,15 @@ public class AuthController {
         if (!form.getPass().equals(form.getRepassword())) {
             result.rejectValue("repassword", "", "Passwords don't match!");
         }
+
         if (result.hasErrors()) {
             return "registration";
         }
-        userService.saveNewUser(form);
-        return "redirect:/";
+
+        if (userService.saveNewUser(form))
+            return "redirect:/";
+
+        return "registration";
     }
 
 }

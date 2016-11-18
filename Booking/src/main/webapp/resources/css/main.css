@@ -3,10 +3,13 @@
 }
 
 body {
-    background: url(/resources/images/bg.jpg) no-repeat center center fixed;
+    background: url(/resources/images/bg.jpg) no-repeat center fixed;
     background-size: 100% 100%;
 }
-
+.myContent {
+    background: url(/resources/images/bg.jpg) no-repeat center fixed;
+    background-size: 100% 100%;
+}
 header {
     background-color: #1b6d85;
     color: white;

@@ -19,9 +19,9 @@ public class BookingRepositoryImpl implements BookingRepository {
 
     @Override
     @Transactional
-    public void save(Booking booking) {
+    public boolean save(Booking booking, String username) {
         Query query = em.createNativeQuery("exec dbo.rentProc @custName = ?, @dateOfBirth = ?\n, " +
-                "@gender = ?, @paymentForm = ?, @hId = ?, @totalPrice = ?, @nId = ?, @arrivalDate = ?, @dateOfDeparture = ?;");
+                "@gender = ?, @paymentForm = ?, @hId = ?, @totalPrice = ?, @nId = ?, @arrivalDate = ?, @dateOfDeparture = ?, @username = ?;");
         query.setParameter(1, booking.getCustName());
         query.setParameter(2, booking.getDateOfBirth());
         query.setParameter(3, booking.getGender());
@@ -31,12 +31,10 @@ public class BookingRepositoryImpl implements BookingRepository {
         query.setParameter(7, booking.getnId());
         query.setParameter(8, booking.getArrivalDate());
         query.setParameter(9, booking.getDateOfDeparture());
+        query.setParameter(10, username);
 
         int result = query.executeUpdate();
-        if (result != 1) {
-            //// FIXME: 15.11.2016
-
-        }
+        return result != 1;
 
     }
 }

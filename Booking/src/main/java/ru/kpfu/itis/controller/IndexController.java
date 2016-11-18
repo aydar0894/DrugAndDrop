@@ -14,7 +14,7 @@ public class IndexController {
 
     @RequestMapping(value = "/")
     public String getIndexPage() {
-        return "index";
+        return "redirect:/booking/";
     }
 
     @RequestMapping(value = "/404", method = RequestMethod.GET)

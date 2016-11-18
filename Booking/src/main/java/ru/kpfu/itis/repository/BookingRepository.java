@@ -8,5 +8,5 @@ import ru.kpfu.itis.model.Booking;
 
 public interface BookingRepository {
 
-    void save(Booking booking);
+    boolean save(Booking booking, String username);
 }

@@ -8,5 +8,5 @@ import ru.kpfu.itis.model.Booking;
  */
 @Service
 public interface BookingService {
-    void save(Booking booking);
+    boolean save(Booking booking, String username);
 }

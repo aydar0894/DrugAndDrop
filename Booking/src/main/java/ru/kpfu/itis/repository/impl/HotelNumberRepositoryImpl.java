@@ -41,13 +41,14 @@ public class HotelNumberRepositoryImpl implements HotelNumberRepository {
         query.setParameter(4, search.getTo());
 
         Double money = search.getMoney();
-        if (money == null)
-            return query.getResultList();
+        List<HotelNumber> result = query.getResultList();
+        if (money == null) {
+            return result;
+        }
 
         long diffInMillies = search.getTo().getTime() - search.getFrom().getTime();
         long days = (TimeUnit.DAYS).convert(diffInMillies, TimeUnit.MILLISECONDS);
 
-        List<HotelNumber> result = query.getResultList();
 
         result.removeIf(hotelNumber -> {
             return days * hotelNumber.getPrice() > search.getMoney();

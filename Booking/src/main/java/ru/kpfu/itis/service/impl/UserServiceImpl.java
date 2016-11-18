@@ -16,9 +16,9 @@ public class UserServiceImpl implements UserService {
     UserRepository userRepository;
 
     @Override
-    public void saveNewUser(UserRegistrationForm form) {
+    public boolean saveNewUser(UserRegistrationForm form) {
         User user = UserRegistrationFormToUserTransformer.transform(form);
-        userRepository.save(user);
+        return userRepository.save(user);
     }
 
     @Secured("hasRole('ROLE_ADMIN')")

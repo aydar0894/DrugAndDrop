@@ -13,7 +13,7 @@
             </md-card-title-text>
             <md-card-title-media>
                 <md-card>
-                    <img src="/resources/images/hotelImgs/${hotelNumber.hotel.pictUrl}" class="md-card-image"
+                    <img src="/resources/images/${hotelNumber.hotel.pictUrl}" class="md-card-image"
                          alt="image caption">
                 </md-card>
             </md-card-title-media>

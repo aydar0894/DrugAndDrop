@@ -18,7 +18,7 @@
         </div>
 
         <div class="form-group">
-            <label for="repassword">Take password again</label>
+            <label for="repassword">Type password again</label>
             <@sf.input path="repassword" id="repassword" type="password" cssClass="form-control" placeholder="Повторите пароль"/>
             <@sf.errors path="repassword"/>
         </div>
